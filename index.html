@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Techy AI Solutions | Premium AI Automation Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.6.0/stitch.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global Three.js Background -->
+    <canvas id="globalCanvas"></canvas>
+
+    <!-- NAVBAR (Linear Style) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                Techy AI <span class="glow-dot"></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home<span></span></a>
+                <a href="#services">Services<span></span></a>
+                <a href="#why-us">Why Us<span></span></a>
+                <a href="#process">Process<span></span></a>
+                <a href="#contact">Contact<span></span></a>
+            </div>
+            <a href="#contact" class="btn btn-primary nav-cta">Book Free Call</a>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <!-- Three.js Hero Canvas -->
+        <canvas id="heroCanvas"></canvas>
+        <div class="container hero-content">
+            <div class="badge">🤖 AI-Powered Business Solutions</div>
+            <h1 class="hero-title">Transform Your Business <br><span class="text-gradient">with AI & Automation</span></h1>
+            <p class="hero-subtitle">Automate growth with websites, AI agents, social media, and SEO.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary btn-lg glow-hover">Book Free Consultation</a>
+                <a href="#services" class="btn btn-outline btn-lg">Explore Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST BAR -->
+    <section class="trust-bar">
+        <div class="container trust-grid">
+            <div class="trust-card"><h3>🚀 AI-First Agency</h3></div>
+            <div class="trust-card"><h3>📍 Lucknow Based</h3></div>
+            <div class="trust-card"><h3>⏱️ 24/7 Support</h3></div>
+        </div>
+    </section>
+
+    <!-- SERVICES (Vercel Style) -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Our Services</h2>
+                <p>Everything your business needs to grow with AI</p>
+            </div>
+            <div class="services-grid">
+                <!-- Data attributes for generation in JS to avoid HTML bloat -->
+                <div class="service-card vercel-card" data-service="website"></div>
+                <div class="service-card vercel-card" data-service="seo"></div>
+                <div class="service-card vercel-card" data-service="chatbot"></div>
+                <div class="service-card vercel-card" data-service="agents"></div>
+                <div class="service-card vercel-card" data-service="social"></div>
+                <div class="service-card vercel-card" data-service="crm"></div>
+                <div class="service-card vercel-card" data-service="video"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAINTENANCE OFFER -->
+    <section class="maintenance-offer section-padding">
+        <div class="container text-center">
+            <div class="section-heading"><h2>Our Maintenance Promise 🎁</h2></div>
+            <div class="maint-cards">
+                <div class="mcard glass">Month 1</div>
+                <div class="mline"></div>
+                <div class="mcard glass">Month 2</div>
+                <div class="mline"></div>
+                <div class="mcard glass">Month 3</div>
+                <div class="mline"></div>
+                <div class="mcard free-card glow-violet">
+                    <span class="free-badge">FREE</span>
+                    <h3>Month 4</h3>
+                </div>
+            </div>
+            <div class="savings-calc">Calculate your savings!</div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section-padding" id="process">
+        <div class="container">
+            <div class="section-heading text-center"><h2>How It Works</h2></div>
+            <div class="process-container relative">
+                <canvas id="processCanvas"></canvas>
+                <div class="process-grid">
+                    <div class="process-step">📞 Consultation</div>
+                    <div class="process-step">🎯 Strategy</div>
+                    <div class="process-step">🚀 Build</div>
+                    <div class="process-step">📊 Launch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US (Stripe Style) -->
+    <section class="why-us section-padding" id="why-us">
+        <div class="container">
+            <div class="section-heading text-center"><h2>Why Choose Us</h2></div>
+            <div class="why-grid">
+                <div class="why-card glass-premium brand-blue">
+                    <div class="counter" data-target="24">0</div><span>/7 Support</span>
+                </div>
+                <div class="why-card glass-premium brand-violet">
+                    <div class="counter" data-target="7">0</div><span> Services</span>
+                </div>
+                <div class="why-card glass-premium brand-blue">
+                    <div class="counter" data-target="48">0</div><span>hr Delivery</span>
+                </div>
+                <div class="why-card glass-premium brand-violet">🤖 AI-First</div>
+                <div class="why-card glass-premium brand-blue">🇮🇳 Local</div>
+                <div class="why-card glass-premium brand-violet">🔒 Transparent</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section-padding" id="contact">
+        <div class="container contact-split relative">
+            <canvas id="contactCanvas"></canvas>
+            <div class="contact-left">
+                <h2>Let's Build Something Amazing</h2>
+                <a href="https://wa.me/919214582873" target="_blank" class="glow-wa">WhatsApp Us</a>
+            </div>
+            <div class="contact-right dark-form">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="715927f5-5a5b-4cdb-9e53-b8d0e99f5053">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <select name="service" required id="serviceSelect">
+                        <option value="" disabled selected>Select Service</option>
+                    </select>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-full">Submit</button>
+                    <div id="formResult" style="display: none; margin-top: 15px; font-weight: 600; text-align: center; padding: 12px; border-radius: 8px; font-size: 1.05rem;" class="glass text-gradient"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <canvas id="footerCanvas"></canvas>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">Techy AI <span class="glow-dot"></span></a>
+                <p class="mt-2 text-muted" style="line-height:1.6; font-size:0.95rem;">AI Automation Agency in Lucknow helping businesses grow with next-gen technology.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-services">
+                <h4>Our Services</h4>
+                <a href="#services">Website Development</a>
+                <a href="#services">Custom AI Agents</a>
+                <a href="#services">SEO & Social Media</a>
+                <a href="#services">AI Chatbots</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p class="text-muted mb-1">📧 techyai27@gmail.com</p>
+                <p class="text-muted mb-2">📍 Lucknow, India</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/_techyy.ai/?hl=en" target="_blank" class="glow-link">Instagram</a> • 
+                    <a href="#" class="glow-link">LinkedIn</a> • 
+                    <a href="#" class="glow-link">X / Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom" style="justify-content: center;">
+            <div>© 2026 Techy AI Solutions. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/919214582873?text=Hi%20Techy%20AI%20Solutions!%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank" class="whatsapp-float">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- SHIMO CHATBOT UI -->
+    <div id="shimoApp"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
