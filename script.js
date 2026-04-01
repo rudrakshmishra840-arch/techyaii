@@ -206,13 +206,31 @@ What would you like to know? 😊
     }, 600);
 }
 
+// --- MOBILE MENU TOGGLE ---
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if(hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('toggle');
+    });
+    
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('toggle');
+        });
+    });
+}
+
 // ==========================================
 // THREE.JS IMPLEMENTATIONS
 // ==========================================
 
 const isMobile = window.innerWidth < 768;
 
-if (!isMobile && THREE) {
+if (THREE) {
     
     // --- 1. GLOBAL PARTICLE NETWORK ---
     const globalCanvas = document.getElementById('globalCanvas');
@@ -223,7 +241,7 @@ if (!isMobile && THREE) {
     glCamera.position.z = 50;
 
     const glGeometry = new THREE.BufferGeometry();
-    const glCount = 200; // Reduced from 500 for better 60fps performance with lines
+    const glCount = isMobile ? 60 : 200; // Reduced from 500 for better 60fps performance with lines
     const glPositions = new Float32Array(glCount * 3);
     const glVelocities = [];
 
@@ -290,7 +308,7 @@ if (!isMobile && THREE) {
     const hCamera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
     const hRenderer = new THREE.WebGLRenderer({ canvas: heroCanvas, alpha: true, antialias:true });
     hRenderer.setSize(window.innerWidth, window.innerHeight);
-    hCamera.position.z = 20;
+    hCamera.position.z = window.innerWidth < 768 ? 40 : 20;
 
     // Breathing glowing sphere
     const sphereGeo = new THREE.IcosahedronGeometry(8, 2);
@@ -300,7 +318,7 @@ if (!isMobile && THREE) {
 
     // 2000 Particles
     const pHGeo = new THREE.BufferGeometry();
-    const pHCount = 2000;
+    const pHCount = isMobile ? 600 : 2000;
     const pHPos = new Float32Array(pHCount * 3);
     const pOrigPos = new Float32Array(pHCount * 3);
     const pColor = new Float32Array(pHCount * 3);
@@ -409,6 +427,7 @@ if (!isMobile && THREE) {
         
         hRenderer.setSize(window.innerWidth, window.innerHeight);
         hCamera.aspect = window.innerWidth / window.innerHeight;
+        hCamera.position.z = window.innerWidth < 768 ? 40 : 20;
         hCamera.updateProjectionMatrix();
     });
 
